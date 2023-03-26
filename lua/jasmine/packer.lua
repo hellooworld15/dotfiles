@@ -9,18 +9,25 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  -- use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-  vim.cmd('colorscheme rose-pine')
+  vim.cmd('colorscheme base16-rose-pine')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
+
+  -- Quick movement between files 
   use('ThePrimeagen/harpoon')
+
+  -- keep information about file changes
   use('mbbill/undotree')
+
+  -- Pope pugins
   use('tpope/vim-fugitive')
 
   use {
@@ -46,11 +53,14 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use({
-      "L3MON4D3/LuaSnip",
-      -- follow latest release.
-      tag = "v<CurrentMajor>.*",
-      -- install jsregexp (optional!:).
-      run = "make install_jsregexp"
-  })
+--  use {
+--  'nvim-tree/nvim-tree.lua',
+--  requires = {
+--    'nvim-tree/nvim-web-devicons', -- optional
+--  },
+-- }
+
+  -- colour manager
+  use 'RRethy/nvim-base16'
+  use 'kyazdani42/nvim-palenight.lua'
 end)

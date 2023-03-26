@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/jasmine.warner/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nvim-base16"] = {
+    loaded = true,
+    path = "/Users/jasmine.warner/.local/share/nvim/site/pack/packer/start/nvim-base16",
+    url = "https://github.com/RRethy/nvim-base16"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/jasmine.warner/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jasmine.warner/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-palenight.lua"] = {
+    loaded = true,
+    path = "/Users/jasmine.warner/.local/share/nvim/site/pack/packer/start/nvim-palenight.lua",
+    url = "https://github.com/kyazdani42/nvim-palenight.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -158,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jasmine.warner/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/Users/jasmine.warner/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
