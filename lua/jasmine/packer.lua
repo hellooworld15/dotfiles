@@ -15,6 +15,18 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+    use({
+      "folke/trouble.nvim",
+      config = function()
+          require("trouble").setup {
+              icons = false,
+              -- your configuration comes here
+              -- or leave it empty to use the default settings
+              -- refer to the configuration section below
+          }
+      end
+  })
   -- use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   vim.cmd('colorscheme base16-rose-pine')
@@ -53,12 +65,12 @@ return require('packer').startup(function(use)
 	  }
   }
 
---  use {
---  'nvim-tree/nvim-tree.lua',
---  requires = {
---    'nvim-tree/nvim-web-devicons', -- optional
---  },
--- }
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+  }
 
   -- colour manager
   use 'RRethy/nvim-base16'
