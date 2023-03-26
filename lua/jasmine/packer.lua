@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
 
   -- Pope pugins
   use('tpope/vim-fugitive')
+  use("nvim-treesitter/nvim-treesitter-context");
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -65,6 +66,11 @@ return require('packer').startup(function(use)
 	  }
   }
 
+  use("folke/zen-mode.nvim")
+  use("github/copilot.vim")
+  use("eandrju/cellular-automaton.nvim")
+  use("laytan/cloak.nvim")
+
   use {
       'nvim-tree/nvim-tree.lua',
       requires = {
@@ -75,4 +81,12 @@ return require('packer').startup(function(use)
   -- colour manager
   use 'RRethy/nvim-base16'
   use 'kyazdani42/nvim-palenight.lua'
+
+  -- Git signs for edits made
+use {
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+}
 end)
