@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
   })
   -- use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-  vim.cmd('colorscheme base16-rose-pine')
+--  vim.cmd('colorscheme base16-rose-pine')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
 
