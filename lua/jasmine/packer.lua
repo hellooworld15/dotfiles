@@ -24,9 +24,7 @@ return require('packer').startup(function(use)
           }
       end
   })
-  -- use({ 'rose-pine/neovim', as = 'rose-pine' })
 
---  vim.cmd('colorscheme base16-rose-pine')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
 
@@ -65,6 +63,8 @@ return require('packer').startup(function(use)
 
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
+
+  -- This is absolutely purely for my pleasure
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
 

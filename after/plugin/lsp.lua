@@ -1,6 +1,7 @@
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
+lsp.setup()
 
 lsp.ensure_installed({
 	-- Replace these with whatever servers you want to install
@@ -47,7 +48,7 @@ lsp.set_preferences({
 })
 
 -- Format on save 
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- For current buffer following remaps are active 
 lsp.on_attach(function(client, bufnr)
@@ -65,7 +66,6 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
