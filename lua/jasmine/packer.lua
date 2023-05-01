@@ -70,7 +70,6 @@ return require('packer').startup(function(use)
     }
 
     use("folke/zen-mode.nvim")
-    use("github/copilot.vim")
 
     -- This is absolutely purely for my pleasure
     use("eandrju/cellular-automaton.nvim")
