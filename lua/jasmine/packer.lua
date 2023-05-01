@@ -36,6 +36,14 @@ return require('packer').startup(function(use)
 
     -- Pope pugins
     use('tpope/vim-fugitive')
+    use('tpope/vim-surround')
+    use('tpope/vim-repeat')
+    use('tpope/vim-sleuth')
+    use('tpope/vim-commentary')
+
+    -- Go.... fast?
+    use 'ggandor/lightspeed.nvim'
+
     use("nvim-treesitter/nvim-treesitter-context");
 
     use {
